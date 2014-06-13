@@ -1,6 +1,7 @@
+" Essential vim configurations : Using Vundle for managing plugins.
 syntax enable
 set encoding=utf-8
-filetype plugin indent on " load file type plugins + indentation
+filetype off
 set nowrap " don't wrap lines
 "set tabstop=2 shiftwidth=2 " a tab is two spaces (or set this to 4) 
 "above one is same as set tw set sw
@@ -29,6 +30,16 @@ set incsearch                 " Do incremental searching
 set nu
 set spell
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Manage Vundle plugin https://github.com/gmarik/vundle.git
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Buffergator'
+
+filetype plugin indent on " load file type plugins + indentation
+
 if has("autocmd")
 au FileType cpp,c,java,sh,pl,php,python,ruby set autoindent
 au FileType cpp,c,java,sh,pl,php,py,rb set smartindent
@@ -49,6 +60,4 @@ hi Identifier ctermfg=darkBlue
 hi Special ctermfg=darkCyan
 hi Constant ctermfg=darkCyan
 hi Comment ctermfg=darkGreen
-au BufRead,BufNewFile *.rb hi rubySymbol ctermfg=green
-
-
+au BufRead,BufNewFile *.rb hi rubySymbol ctermfg=green 

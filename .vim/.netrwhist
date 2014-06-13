@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='scp://root@node51//usr/local/tomcat/webapps/ROOT/'
+let g:netrw_dirhist_2='scp://root@node51//usr/local/tomcat/webapps/ROOT/WEB-INF/'
+let g:netrw_dirhist_3='scp://root@node51//usr/local/tomcat/webapps/ROOT/WEB-INF/classes/'
+let g:netrw_dirhist_4='scp://node51//usr/local/tomcat/ROOT/WEB-INF/'
+let g:netrw_dirhist_5='scp://node51//usr/local/tomcat/ROOT/WEB-INF/classes/'
+let g:netrw_dirhist_6='/Users/sangram/home/repos/git/sm/userinterface/zcommon/generated/localization'
