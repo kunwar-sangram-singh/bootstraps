@@ -29,14 +29,26 @@ set hlsearch                  " Highlight searches
 set incsearch                 " Do incremental searching
 set nu
 set spell
+"set fdm=indent
+set mouse=a
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+"let g:Powerline_symbols = 'fancy'
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Manage Vundle plugin https://github.com/gmarik/vundle.git
 Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Buffergator'
+Plugin 'cscope.vim'
+Plugin 'taglist-plus'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on " load file type plugins + indentation
 
@@ -61,3 +73,16 @@ hi Special ctermfg=darkCyan
 hi Constant ctermfg=darkCyan
 hi Comment ctermfg=darkGreen
 au BufRead,BufNewFile *.rb hi rubySymbol ctermfg=green 
+
+autocmd! bufwritepost .vimrc source %
+
+"let mapleader = ","
+"map <leader>n <esc>:tabprevious<CR>
+"map <leader>m <esc>:tabnext<CR>
+
+"map _cl :call functionName()<CR>
+"
+"func functionName()
+"
+"
+"endfunc
